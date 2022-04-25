@@ -2,11 +2,13 @@ package com.example.is2011_xo;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
 
 
 
@@ -18,6 +20,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     private int rountCount;
     boolean activePlayer;
+    private String name1;
+    private String name2;
 
     //p1 => 0
     //p2 => 1
@@ -47,6 +51,13 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         }
         rountCount = 0;
         activePlayer = true;
+
+        Bundle arguments = getIntent().getExtras();
+
+        if(arguments!=null) {
+            name1 = arguments.get("name1").toString();
+            name2 = arguments.getString("name2");
+        }
     }
 
 
@@ -78,15 +89,17 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         if (checkWinner() == true) { // если есть победитель
             if (activePlayer == true) { //право хода у первого игрока
-                
-                playerStatus.setText("Второй игрок выиграл!"); //тогда выиграл второй
+
+                Toast pl2 = Toast.makeText(this, "Игрок " +name2+ " выиграл!",Toast.LENGTH_LONG);
+                pl2.show();
             }
             else {
-
-                playerStatus.setText("Первый игрок выиграл!");
+                Toast pl1 = Toast.makeText(this, "Игрок " +name1+ " выиграл!",Toast.LENGTH_LONG);
+                pl1.show();
             }
         }else if (rountCount == 9) {
-            playerStatus.setText("Ничья!");
+            Toast nichya = Toast.makeText(this, "Ничья!",Toast.LENGTH_LONG);
+            nichya.show();
 
         }
 //
@@ -94,7 +107,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             @Override
             public void onClick(View view) {
                 playAgain();
-                playerStatus.setText("");
+
             }
         });
     }
@@ -116,12 +129,15 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     }
 
     public void playAgain() { // обнуление поля кнопок
-        rountCount = 0;
-        activePlayer = true;
+        Toast reset = Toast.makeText(this, "Не хотите ли повторить?",Toast.LENGTH_LONG);
+        reset.show();
+        Intent i = new Intent(this, StartActivity.class);
+        i.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+        startActivity(i);
+        closeActivity();
+    }
 
-        for (int i = 0; i < buttons.length; i++) {
-            gameState[i] = 2;
-            buttons[i].setText("");
-        }
+    private void closeActivity() {
+        this.finish();
     }
 }

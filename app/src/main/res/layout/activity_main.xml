@@ -22,7 +22,7 @@
         android:id="@+id/linearLayout"
         android:layout_width="369dp"
         android:layout_height="123dp"
-        android:layout_marginStart="24dp"
+        android:layout_marginStart="20dp"
         android:layout_marginTop="16dp"
         android:orientation="horizontal"
         app:layout_constraintStart_toStartOf="parent"
@@ -32,33 +32,31 @@
             android:id="@+id/btn_0"
             android:layout_width="120dp"
             android:layout_height="120dp"
-            android:textSize="@dimen/fontsizebtn"
-             />
+            android:textSize="@dimen/fontsizebtn" />
 
         <Button
             android:id="@+id/btn_1"
             android:layout_width="120dp"
             android:layout_height="120dp"
-            android:textSize="@dimen/fontsizebtn"
-             />
+            android:textSize="@dimen/fontsizebtn" />
 
         <Button
             android:id="@+id/btn_2"
             android:layout_width="120dp"
             android:layout_height="120dp"
-            android:textSize="@dimen/fontsizebtn"
-             />
+            android:textSize="@dimen/fontsizebtn" />
     </LinearLayout>
 
     <Button
         android:id="@+id/resetGame"
-        android:layout_width="157dp"
-        android:layout_height="49dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="20dp"
+        android:layout_width="187dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="112dp"
         android:backgroundTint="@color/clrbutton"
-        android:textColor="@color/clrbtntext"
         android:text="Rest Game"
+        android:textColor="@color/clrbtntext"
+        android:textSize="20dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/playerStatus" />
 
@@ -66,7 +64,7 @@
         android:id="@+id/linearLayout2"
         android:layout_width="364dp"
         android:layout_height="123dp"
-        android:layout_marginStart="24dp"
+        android:layout_marginStart="20dp"
         android:layout_marginTop="5dp"
         android:orientation="horizontal"
         app:layout_constraintStart_toStartOf="parent"
@@ -76,29 +74,26 @@
             android:id="@+id/btn_3"
             android:layout_width="120dp"
             android:layout_height="120dp"
-            android:textSize="@dimen/fontsizebtn"
-             />
+            android:textSize="@dimen/fontsizebtn" />
 
         <Button
             android:id="@+id/btn_4"
             android:layout_width="120dp"
             android:layout_height="120dp"
-            android:textSize="@dimen/fontsizebtn"
-             />
+            android:textSize="@dimen/fontsizebtn" />
 
         <Button
             android:id="@+id/btn_5"
             android:layout_width="120dp"
             android:layout_height="120dp"
-            android:textSize="@dimen/fontsizebtn"
-             />
+            android:textSize="@dimen/fontsizebtn" />
     </LinearLayout>
 
     <LinearLayout
         android:id="@+id/linearLayout3"
         android:layout_width="369dp"
         android:layout_height="123dp"
-        android:layout_marginStart="24dp"
+        android:layout_marginStart="20dp"
         android:layout_marginTop="5dp"
         android:orientation="horizontal"
         app:layout_constraintStart_toStartOf="parent"
@@ -108,22 +103,19 @@
             android:id="@+id/btn_6"
             android:layout_width="120dp"
             android:layout_height="120dp"
-            android:textSize="@dimen/fontsizebtn"
-             />
+            android:textSize="@dimen/fontsizebtn" />
 
         <Button
             android:id="@+id/btn_7"
             android:layout_width="120dp"
             android:layout_height="120dp"
-            android:textSize="@dimen/fontsizebtn"
-             />
+            android:textSize="@dimen/fontsizebtn" />
 
         <Button
             android:id="@+id/btn_8"
             android:layout_width="120dp"
             android:layout_height="120dp"
-            android:textSize="@dimen/fontsizebtn"
-             />
+            android:textSize="@dimen/fontsizebtn" />
 
     </LinearLayout>
 
